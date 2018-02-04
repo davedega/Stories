@@ -27,10 +27,4 @@ class StoriesFragment : Fragment(), StoriesContract.View {
     override fun setPresenter(presenter: StoriesContract.Presenter) {
         this.presenter = presenter as StoriesPesenter
     }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        presenter.onActivityResult(requestCode,resultCode,data)
-    }
-
 }
