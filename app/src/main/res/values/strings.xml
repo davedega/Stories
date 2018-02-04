@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">stories</string>
+    <string name="app_name">Stories</string>
+    <string name="open_galery">Open Gallery</string>
+    <string name="path_file">Path file</string>
 </resources>
