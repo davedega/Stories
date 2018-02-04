@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.provider.MediaStore
+import android.support.v4.app.ActivityCompat.startActivityForResult
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 
@@ -24,24 +25,42 @@ class StoriesPesenter(private var context: Context,
                 "Select Video"), REQUEST_TAKE_GALLERY_VIDEO)
     }
 
+    override fun requestVideoCapture() {
+        val takeVideoIntent = Intent(MediaStore.ACTION_VIDEO_CAPTURE)
+        takeVideoIntent.resolveActivity(context.packageManager)?.let {
+            (context as AppCompatActivity).startActivityForResult(takeVideoIntent, REQUEST_VIDEO_CAPTURE)
+        }
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
 
         if (resultCode == Activity.RESULT_OK) {
-            if (requestCode == REQUEST_TAKE_GALLERY_VIDEO) {
-                data?.let {
-                    val selectedImageUri = it.data
-                    var filemanagerstring = selectedImageUri.path
+            when(requestCode){
+                REQUEST_TAKE_GALLERY_VIDEO ->{
+                    data?.let {
+                        val selectedImageUri = it.data
+                        val filemanagerstring = selectedImageUri.path
 
-                    filemanagerstring?.let {
-                        Log.e("Presenter", "##  filemanager string: " + it)
+                        Log.e("Presenter", "##  selectedImageUri: " + selectedImageUri)
+
+
+                        filemanagerstring?.let {
+                            Log.e("Presenter", "##  filemanager string: " + it)
+                        }
+
+                        var selectedImagePath = getPath(selectedImageUri)
+                        selectedImagePath?.let {
+                            Log.e("Presenter", " selectedImagePath: " + it)
+                        }
                     }
-
-                    var selectedImagePath = getPath(selectedImageUri)
-                    selectedImagePath?.let {
-                        Log.e("Presenter", " selectedImagePath: " + it)
+                    Log.e("Presenter", "## No image/video selected :( ")
+                }
+                REQUEST_VIDEO_CAPTURE -> {
+                    data?.let {
+                        Log.e("Presenter", "## uri from video recorded!... "+it.data)
+                        view.setVideoURI(it.data)
                     }
                 }
-                Log.e("Presenter", "## No image/video selected :( ")
             }
         }
     }
@@ -62,5 +81,6 @@ class StoriesPesenter(private var context: Context,
 
     companion object {
         const val REQUEST_TAKE_GALLERY_VIDEO = 20
+        const val REQUEST_VIDEO_CAPTURE = 10
     }
 }

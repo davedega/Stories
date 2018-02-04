@@ -1,6 +1,7 @@
 package com.dega.stories
 
 import android.content.Intent
+import android.net.Uri
 
 /**
  * Created by ddelgado on 04/02/2018.
@@ -11,10 +12,14 @@ interface StoriesContract {
 
         fun openGallery()
 
+        fun requestVideoCapture()
+
         fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?)
     }
 
     interface View {
         fun setPresenter(presenter: Presenter)
+
+        fun setVideoURI(videoUri: Uri)
     }
 }

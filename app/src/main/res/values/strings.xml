@@ -2,4 +2,5 @@
     <string name="app_name">Stories</string>
     <string name="open_galery">Open Gallery</string>
     <string name="path_file">Path file</string>
+    <string name="make_video">Make video</string>
 </resources>
