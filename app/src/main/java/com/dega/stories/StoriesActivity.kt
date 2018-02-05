@@ -17,19 +17,21 @@ class StoriesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-        Log.e("MAIN","HUEVOS!")
+        Log.e("MAIN", "HUEVOS!")
 
         val fragment = StoriesFragment();
         supportFragmentManager.setView { add(R.id.content_frame, fragment) }
         presenter = StoriesPesenter(this, fragment)
         fragment.setPresenter(presenter)
-
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         presenter.onActivityResult(requestCode, resultCode, data)
+    }
 
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        presenter.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
     fun FragmentManager.setView(func: FragmentTransaction.() -> Unit) {
@@ -37,5 +39,4 @@ class StoriesActivity : AppCompatActivity() {
         fragmentTransaction.func()
         fragmentTransaction.commit()
     }
-
 }
