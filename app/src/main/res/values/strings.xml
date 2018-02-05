@@ -3,4 +3,9 @@
     <string name="open_galery">Open Gallery</string>
     <string name="path_file">Path file</string>
     <string name="make_video">Make video</string>
+    <string name="ok">Ok</string>
+
+    <string name="camera_explanation">Camera access is required to make a video.</string>
+    <string name="gallery_explanation"> acces is required to acces videos</string>
+
 </resources>
