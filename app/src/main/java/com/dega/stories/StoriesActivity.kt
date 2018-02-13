@@ -26,11 +26,13 @@ class StoriesActivity : AppCompatActivity() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        // Delegate the result from activity launched to the presenter
         presenter.onActivityResult(requestCode, resultCode, data)
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        // Delegate the result from requesting permissions to the presenter
         presenter.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 

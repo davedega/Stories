@@ -3,4 +3,9 @@
     <color name="colorPrimary">#62919C</color>
     <color name="colorPrimaryDark">#127987</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="atlantis">#74D437</color>
+    <color name="iron">#C9C9C9</color>
 </resources>

@@ -10,18 +10,17 @@ interface StoriesContract {
 
     interface Presenter {
 
-        // Ask for read permissions before open the gallery
-        fun openGallery()
-
-        fun requestVideoCapture()
-
+        // Dispatch incoming result delegated by the Activity
         fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?)
 
+        // Dispatch incoming result delegated by the Activity
         fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray)
 
-        fun requestGalleryPermission()
+        fun onOpenGallery()
 
-        fun requestCameraPermission()
+        fun onRequestVideoCapture()
+
+        fun onUploadVideo()
 
     }
 
@@ -32,5 +31,7 @@ interface StoriesContract {
         fun setVideoURI(videoUri: Uri)
 
         fun explainPermissions(textExplanation: String, requestPermission: () -> Unit)
+
+        fun enableButton()
     }
 }

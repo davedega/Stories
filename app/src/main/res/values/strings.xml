@@ -6,6 +6,7 @@
     <string name="ok">Ok</string>
 
     <string name="camera_explanation">Camera access is required to make a video.</string>
-    <string name="gallery_explanation"> acces is required to acces videos</string>
+    <string name="gallery_explanation">Read acces is required to select a video</string>
+    <string name="upload_video">Upload video</string>
 
 </resources>

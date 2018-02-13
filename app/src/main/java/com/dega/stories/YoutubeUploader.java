@@ -46,7 +46,7 @@ public class YoutubeUploader {
     // CLIENT_ID == Google APIs Console Project Number:
     public static final String CLIENT_ID = "client_id";
 
-    public static final String YOUTUBE_AUTH_TOKEN_TYPE = "youtube";
+    private static final String YOUTUBE_AUTH_TOKEN_TYPE = "youtube";
 
     private static final String AUTH_URL = "https://www.google.com/accounts/ClientLogin";
 
@@ -170,7 +170,7 @@ public class YoutubeUploader {
         return null;
     }
 
-    public static int totalBytesUploaded = 0;
+    private static int totalBytesUploaded = 0;
 
     @SuppressLint("DefaultLocale")
     @SuppressWarnings("resource")
