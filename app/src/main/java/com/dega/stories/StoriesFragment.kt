@@ -27,7 +27,7 @@ class StoriesFragment : Fragment(), StoriesContract.View {
 
         makeVideoBtn.setOnClickListener({ presenter.onRequestVideoCapture() })
 
-        uploadVideoBtn.setOnClickListener({presenter.onOpenGallery()})
+        uploadVideoBtn.setOnClickListener({})
     }
 
     override fun setPresenter(presenter: StoriesContract.Presenter) {

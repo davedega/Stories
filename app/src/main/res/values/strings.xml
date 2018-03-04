@@ -9,4 +9,8 @@
     <string name="gallery_explanation">Read acces is required to select a video</string>
     <string name="upload_video">Upload video</string>
 
+    <string name="title_story">Title stories</string>
+    <string name="short_desc">Short descriptions</string>
+
+
 </resources>
