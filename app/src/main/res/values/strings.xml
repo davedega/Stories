@@ -5,12 +5,44 @@
     <string name="make_video">Make video</string>
     <string name="ok">Ok</string>
 
+    <!--Permissions-->
+
     <string name="camera_explanation">Camera access is required to make a video.</string>
     <string name="gallery_explanation">Read acces is required to select a video</string>
+
+
+    <!--Upload-->
     <string name="upload_video">Upload video</string>
+    <string name="upload_started">Upload started</string>
+    <string name="youtube_upload_started">YouTube Direct Lite upload started</string>
+    <string name="youtube_upload">YouTube upload</string>
+
+
+    <string name="initiation_started">Initiation Started</string>
+    <string name="initiation_completed">Initiation Completed</string>
+    <string name="upload_in_progress">Direct Lite upload in progress</string>
+    <string name="yt_upload_completed">YouTube Upload Completed</string>
+    <string name="upload_completed">Upload completed</string>
+    <string name="upload_not_started">Upload Not Started!</string>
+    <string name="please_try_again">Please try again</string>
+    <string name="cant_access_play">Can\'t access to Google Play services</string>
+    <string name="yt_upload_failed">YouTube Upload Failed</string>
+    <string name="see_the_newly_uploaded_video">See the newly uploaded video</string>
+    <string name="watch_your_video">Watch your video</string>
+
+
 
     <string name="title_story">Title stories</string>
     <string name="short_desc">Short descriptions</string>
+
+
+    <string name="connection_to_google_play_failed">Connection to Play Services failed.</string>
+
+
+    <!-- Shared preferences -->
+    <string name="pref_account_name" translatable="false">account_name</string>
+
+
 
 
 </resources>

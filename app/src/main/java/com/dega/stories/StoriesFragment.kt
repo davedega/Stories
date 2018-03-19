@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.fragment_stories.*
  * Created by ddelgado on 04/02/2018.
  */
 class StoriesFragment : Fragment(), StoriesContract.View {
+
     lateinit var presenter: StoriesPesenter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -27,7 +28,7 @@ class StoriesFragment : Fragment(), StoriesContract.View {
 
         makeVideoBtn.setOnClickListener({ presenter.onRequestVideoCapture() })
 
-        uploadVideoBtn.setOnClickListener({})
+        uploadVideoBtn.setOnClickListener({ presenter.onUploadVideo() })
     }
 
     override fun setPresenter(presenter: StoriesContract.Presenter) {
@@ -46,7 +47,17 @@ class StoriesFragment : Fragment(), StoriesContract.View {
     }
 
     override fun enableButton() {
-        uploadVideoBtn.setBackgroundColor(ContextCompat.getColor(context,R.color.atlantis))
+        uploadVideoBtn.setBackgroundColor(ContextCompat.getColor(context, R.color.atlantis))
+    }
+
+    override fun disableButton() {
+        uploadVideoBtn.setBackgroundColor(ContextCompat.getColor(context, R.color.iron))
+        pathFileTv.text = ""
+    }
+
+    override fun showMessage(message: Int) {
+        Snackbar.make(root, getString(message),
+                Snackbar.LENGTH_INDEFINITE).show()
     }
 
 }

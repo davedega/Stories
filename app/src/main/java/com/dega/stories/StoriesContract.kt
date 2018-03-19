@@ -33,5 +33,10 @@ interface StoriesContract {
         fun explainPermissions(textExplanation: String, requestPermission: () -> Unit)
 
         fun enableButton()
+
+        fun disableButton()
+
+        fun showMessage(message: Int)
+
     }
 }

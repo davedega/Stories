@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:storiesApp="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root"
     android:layout_width="match_parent"
@@ -14,13 +14,13 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="@string/open_galery"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/makeVideoBtn"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.105" />
+        storiesApp:layout_constraintBottom_toBottomOf="parent"
+        storiesApp:layout_constraintEnd_toStartOf="@+id/makeVideoBtn"
+        storiesApp:layout_constraintHorizontal_bias="0.501"
+        storiesApp:layout_constraintLeft_toLeftOf="parent"
+        storiesApp:layout_constraintRight_toRightOf="parent"
+        storiesApp:layout_constraintTop_toTopOf="parent"
+        storiesApp:layout_constraintVertical_bias="0.105" />
 
     <TextView
         android:id="@+id/pathFileTv"
@@ -30,9 +30,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/path_file"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/openGalleryBtn" />
+        storiesApp:layout_constraintEnd_toEndOf="parent"
+        storiesApp:layout_constraintStart_toStartOf="parent"
+        storiesApp:layout_constraintTop_toBottomOf="@+id/openGalleryBtn" />
 
     <VideoView
         android:id="@+id/videoView"
@@ -41,9 +41,9 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pathFileTv" />
+        storiesApp:layout_constraintEnd_toEndOf="parent"
+        storiesApp:layout_constraintStart_toStartOf="parent"
+        storiesApp:layout_constraintTop_toBottomOf="@+id/pathFileTv" />
 
     <Button
         android:id="@+id/makeVideoBtn"
@@ -52,8 +52,8 @@
         android:layout_marginEnd="44dp"
         android:layout_marginTop="52dp"
         android:text="@string/make_video"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        storiesApp:layout_constraintEnd_toEndOf="parent"
+        storiesApp:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/uploadVideoBtn"
@@ -64,9 +64,9 @@
         android:background="@color/iron"
         android:text="@string/upload_video"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        storiesApp:layout_constraintBottom_toBottomOf="parent"
+        storiesApp:layout_constraintEnd_toEndOf="parent"
+        storiesApp:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
