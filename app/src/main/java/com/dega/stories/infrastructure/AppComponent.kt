@@ -2,6 +2,7 @@ package com.dega.stories.infrastructure
 
 import com.dega.stories.Aja
 import com.dega.stories.App
+import com.dega.stories.StoriesPesenter
 import dagger.Component
 import javax.inject.Singleton
 
@@ -16,4 +17,5 @@ interface AppComponent {
 
     fun inject(aja: Aja)
 
+    fun inject(presenter: StoriesPesenter)
 }

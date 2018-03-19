@@ -12,7 +12,7 @@ class Prefs(var context: Context) {
     val prefs: SharedPreferences = context.getSharedPreferences(context.getString(R.string.app_name), 0);
 
     var accountName: String
-        get() = prefs.getString(context.getString(R.string.pref_account_name), null)
+        get() = prefs.getString(context.getString(R.string.pref_account_name), "")
         set(accountName) = prefs.edit().putString(context.getString(R.string.pref_account_name), accountName).apply()
 
 }

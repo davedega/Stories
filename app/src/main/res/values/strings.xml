@@ -43,6 +43,7 @@
     <string name="pref_account_name" translatable="false">account_name</string>
 
 
-
+    <!--Messages-->
+    <string name="no_network_connection">No network connection available.</string>
 
 </resources>
